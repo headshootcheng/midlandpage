@@ -26,9 +26,9 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   }, [navigation]);
 
   const [yOffset, setYOffset] = useState(new Animated.Value(0));
-
-  return (
-    <View style={styles.background}>
+  const [currentView, setCurrentView] = useState<number>(0);
+  const MenuHeader = () => {
+    return (
       <Animated.View
         style={[
           styles.menubar,
@@ -39,12 +39,76 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
             }),
             height: yOffset.interpolate({
               inputRange: [0, 100],
-              outputRange: [0, 90],
+              outputRange: [0, 40],
             }),
           },
         ]}>
-        <Text>123</Text>
+        <View style={{display: 'flex', flexDirection: 'column'}}>
+          <Text
+            style={[styles.menutext, currentView == 0 && {fontWeight: 'bold'}]}>
+            物業
+          </Text>
+          <View
+            style={[
+              styles.yellowbar,
+              currentView == 0 && {borderTopColor: 'orange'},
+            ]}
+          />
+        </View>
+        <View style={{display: 'flex', flexDirection: 'column'}}>
+          <Text
+            style={[styles.menutext, currentView == 1 && {fontWeight: 'bold'}]}>
+            成交
+          </Text>
+          <View
+            style={[
+              styles.yellowbar,
+              currentView == 1 && {borderTopColor: 'orange'},
+            ]}
+          />
+        </View>
+        <View style={{display: 'flex', flexDirection: 'column'}}>
+          <Text
+            style={[styles.menutext, currentView == 2 && {fontWeight: 'bold'}]}>
+            屋苑
+          </Text>
+          <View
+            style={[
+              styles.yellowbar,
+              currentView == 2 && {borderTopColor: 'orange'},
+            ]}
+          />
+        </View>
+        <View style={{display: 'flex', flexDirection: 'column'}}>
+          <Text
+            style={[styles.menutext, currentView == 3 && {fontWeight: 'bold'}]}>
+            代理
+          </Text>
+          <View
+            style={[
+              styles.yellowbar,
+              currentView == 3 && {borderTopColor: 'orange'},
+            ]}
+          />
+        </View>
+        <View style={{display: 'flex', flexDirection: 'column'}}>
+          <Text
+            style={[styles.menutext, currentView == 4 && {fontWeight: 'bold'}]}>
+            資訊
+          </Text>
+          <View
+            style={[
+              styles.yellowbar,
+              currentView == 4 && {borderTopColor: 'orange'},
+            ]}
+          />
+        </View>
       </Animated.View>
+    );
+  };
+  return (
+    <View style={styles.background}>
+      <MenuHeader />
       <ScrollView
         style={styles.background}
         onScroll={Animated.event([
@@ -66,9 +130,24 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
 
 const styles = StyleSheet.create({
   menubar: {
-    backgroundColor: 'gray',
+    // backgroundColor: 'gray',
     width: '100%',
     maxHeight: 50,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    paddingBottom: 5,
+    paddingHorizontal: 20,
+  },
+  menutext: {
+    fontSize: 17,
+    marginBottom: 4,
+  },
+  yellowbar: {
+    borderColor: 'transparent',
+    borderTopWidth: 3,
+    borderStyle: 'solid',
   },
   background: {
     display: 'flex',
