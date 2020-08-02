@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-const AgentList: React.FC<{}> = ({}) => {
+const PropertyInfo: React.FC<{}> = ({}) => {
   return (
     <View style={styles.wrapper}>
-      <Text>AgentList</Text>
+      <Text>PropertyInfo</Text>
     </View>
   );
 };
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AgentList;
+export default PropertyInfo;
