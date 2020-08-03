@@ -7,7 +7,7 @@ import {
   View,
   Animated,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 import PropertyDetail from '../components/PropertyDetail';
 import PropertyEstimation from '../components/PropertyEstimation';
 import PropertyTransaction from '../components/PropertyTransaction';
@@ -16,14 +16,29 @@ import PropertyRecommendation from '../components/PropertyRecommendation';
 import PropertyLocation from '../components/PropertyLoacation';
 import AgentList from '../components/AgentList';
 import LatestNews from '../components/LatestNews';
-
+import _ from 'lodash';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   React.useLayoutEffect(() => {
     navigation.setOptions({
+      headerLeft: () => (
+        <Icon name="chevron-back" size={25} style={{marginLeft: 10}} />
+      ),
       headerTitle: () => <Text style={styles.headerText}>海怡半島</Text>,
       headerRight: () => (
-        <View>
-          <Icon name="heart-o" size={25} />
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginRight: 10,
+          }}>
+          <Icon
+            name="share-social-outline"
+            size={25}
+            style={{marginHorizontal: 5}}
+          />
+          <Icon name="heart-outline" size={25} style={{marginHorizontal: 5}} />
         </View>
       ),
     });
@@ -31,6 +46,10 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
 
   const [yOffset, setYOffset] = useState(new Animated.Value(0));
   const [currentView, setCurrentView] = useState<number>(0);
+  const propertyData = require('../data/property.json');
+  const photo = _.get(propertyData, 'photos', []);
+  const video = _.get(propertyData, 'video', []);
+  const vr = _.get(propertyData, 'photo360', []);
   const MenuHeader = () => {
     return (
       <Animated.View
@@ -119,7 +138,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
           {nativeEvent: {contentOffset: {y: yOffset}}},
         ])}
         scrollEventThrottle={100}>
-        <PropertyDetail />
+        <PropertyDetail photoList={photo} videoList={video} vrList={vr} />
         <PropertyEstimation />
         <PropertyTransaction />
         <PropertyCalculation />

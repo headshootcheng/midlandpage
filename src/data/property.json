@@ -2,7 +2,7 @@
   "serial_no": "M100099998",
   "tx_type": ["L", "S"],
   "tags": ["sole", "below"],
-  "floor_level": { "id": "H", "name": "高層" },
+  "floor_level": {"id": "H", "name": "高層"},
   "unit_id": "U000278175",
   "hos": false,
   "icon": "vr",
@@ -399,8 +399,8 @@
   "url_desc": "https://uat.midland.com.hk/zh-hk/property/%E6%B8%AF%E5%B3%B6-%E9%B4%A8%E8%84%B7%E6%B4%B2-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B62%E6%9C%9F15%E5%BA%A7%E9%AB%98%E5%B1%A4C%E5%AE%A4-M100099998",
   "monthly_pay": "21337",
   "unpub_type": "",
-  "region": { "id": "10", "name": "港島" },
-  "subregion": { "id": "1003", "name": "南區" },
+  "region": {"id": "10", "name": "港島"},
+  "subregion": {"id": "1003", "name": "南區"},
   "district": {
     "id": "100305",
     "name": "鴨脷洲",
@@ -414,11 +414,11 @@
     "ebook_is_phase": true,
     "news_name": "海怡半島",
     "school_net": {
-      "kindergarten": { "id": "SU", "name": "南區" },
+      "kindergarten": {"id": "SU", "name": "南區"},
       "kindergarten_url_desc": "https://proptx.midland.com.hk/school/inc/school_list.jsp?type=KG&distCode=SU",
       "primary": "18",
       "primary_url_desc": "https://proptx.midland.com.hk/school/inc/school_list.jsp?type=PS&distCode=SU&distNet=18",
-      "secondary": { "id": "SU", "name": "南區" },
+      "secondary": {"id": "SU", "name": "南區"},
       "secondary_url_desc": "https://proptx.midland.com.hk/school/inc/school_list.jsp?type=SS&distCode=SU"
     },
     "op_date": "1992年10月30日(7至13座)\r\n1993年7月27日(13A,15及16座)",
@@ -436,7 +436,7 @@
     "last_op_date": "1993-07-27T00:00:00.000Z",
     "siteplan": []
   },
-  "phase": { "id": "P000000780", "name": "2期" },
+  "phase": {"id": "P000000780", "name": "2期"},
   "building": {
     "id": "B000002568",
     "name": "15座",
@@ -448,18 +448,18 @@
     "first_op_date": "1993-07-27T00:00:00.000Z",
     "address": "海怡路15號"
   },
-  "misc": { "sell": [], "rent": [] },
+  "misc": {"sell": [], "rent": []},
   "facilityGroup": [
-    { "id": "FM12", "name": "會所" },
-    { "id": "FM02", "name": "泳池" },
-    { "id": "FM01", "name": "兒童設施" },
-    { "id": "FM10", "name": "運動設施" },
-    { "id": "FM07", "name": "娛樂設施" },
-    { "id": "FM09", "name": "餐飲設施" },
-    { "id": "FM05", "name": "美容/保健" },
-    { "id": "FM14", "name": "基座商場" }
+    {"id": "FM12", "name": "會所"},
+    {"id": "FM02", "name": "泳池"},
+    {"id": "FM01", "name": "兒童設施"},
+    {"id": "FM10", "name": "運動設施"},
+    {"id": "FM07", "name": "娛樂設施"},
+    {"id": "FM09", "name": "餐飲設施"},
+    {"id": "FM05", "name": "美容/保健"},
+    {"id": "FM14", "name": "基座商場"}
   ],
-  "location": { "lat": 22.243182, "lon": 114.146124 },
+  "location": {"lat": 22.243182, "lon": 114.146124},
   "valuation": true,
   "isFirstHand": false,
   "selected_agent": {
@@ -473,7 +473,7 @@
     "dept_id": "02917",
     "surname": "藍",
     "other_name": "逸軒",
-    "name": { "chi": "藍逸軒", "eng": "Ken Lam" },
+    "name": {"chi": "藍逸軒", "eng": "Ken Lam"},
     "title": "物業顧問",
     "agent_chat_ready": true,
     "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -522,15 +522,15 @@
       "video_thumbnail": "https://i.vimeocdn.com/video/878178651_640x360.jpg",
       "video_id": "407543143",
       "tags": [
-        { "time": 23, "name": "書房" },
-        { "time": 33, "name": "主人套房" },
-        { "time": 19, "name": "浴室" },
-        { "time": 29, "name": "主人房" },
-        { "time": 0, "name": "客廳" },
-        { "time": 2, "name": "景觀" },
-        { "time": 10, "name": "廚房" },
-        { "time": 14, "name": "飯廳" },
-        { "time": 16, "name": "客廳" }
+        {"time": 23, "name": "書房"},
+        {"time": 33, "name": "主人套房"},
+        {"time": 19, "name": "浴室"},
+        {"time": 29, "name": "主人房"},
+        {"time": 0, "name": "客廳"},
+        {"time": 2, "name": "景觀"},
+        {"time": 10, "name": "廚房"},
+        {"time": 14, "name": "飯廳"},
+        {"time": 16, "name": "客廳"}
       ]
     },
     {
@@ -540,15 +540,15 @@
       "video_thumbnail": "https://i.vimeocdn.com/video/879131771_640x360.jpg",
       "video_id": "408265279",
       "tags": [
-        { "time": 52, "name": "主人房" },
-        { "time": 0, "name": "廚房" },
-        { "time": 58, "name": "主人套房" },
-        { "time": 7, "name": "客廳" },
-        { "time": 14, "name": "景觀" },
-        { "time": 20, "name": "飯廳" },
-        { "time": 27, "name": "浴室" },
-        { "time": 35, "name": "睡房" },
-        { "time": 43, "name": "睡房" }
+        {"time": 52, "name": "主人房"},
+        {"time": 0, "name": "廚房"},
+        {"time": 58, "name": "主人套房"},
+        {"time": 7, "name": "客廳"},
+        {"time": 14, "name": "景觀"},
+        {"time": 20, "name": "飯廳"},
+        {"time": 27, "name": "浴室"},
+        {"time": 35, "name": "睡房"},
+        {"time": 43, "name": "睡房"}
       ]
     },
     {
@@ -558,16 +558,16 @@
       "video_thumbnail": "https://i.vimeocdn.com/video/879172573_640x360.jpg",
       "video_id": "408295735",
       "tags": [
-        { "time": 50.56, "name": "主人套房" },
-        { "time": 56.86, "name": "景觀" },
-        { "time": 5.35, "name": "廚房" },
-        { "time": 39.4, "name": "睡房" },
-        { "time": 10.4, "name": "飯廳" },
-        { "time": 34.39, "name": "工人房" },
-        { "time": 27.4, "name": "浴室" },
-        { "time": 20.95, "name": "景觀" },
-        { "time": 14.12, "name": "客廳" },
-        { "time": 44.41, "name": "主人房" }
+        {"time": 50.56, "name": "主人套房"},
+        {"time": 56.86, "name": "景觀"},
+        {"time": 5.35, "name": "廚房"},
+        {"time": 39.4, "name": "睡房"},
+        {"time": 10.4, "name": "飯廳"},
+        {"time": 34.39, "name": "工人房"},
+        {"time": 27.4, "name": "浴室"},
+        {"time": 20.95, "name": "景觀"},
+        {"time": 14.12, "name": "客廳"},
+        {"time": 44.41, "name": "主人房"}
       ]
     }
   ],
@@ -583,7 +583,7 @@
       "dept_id": "00229",
       "surname": "張",
       "other_name": "萍",
-      "name": { "chi": "張萍", "eng": "Kitty Zhang" },
+      "name": {"chi": "張萍", "eng": "Kitty Zhang"},
       "title": "客戶經理",
       "agent_chat_ready": true,
       "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -602,7 +602,7 @@
       "dept_id": "02917",
       "surname": "藍",
       "other_name": "逸軒",
-      "name": { "chi": "藍逸軒", "eng": "Ken Lam" },
+      "name": {"chi": "藍逸軒", "eng": "Ken Lam"},
       "title": "物業顧問",
       "agent_chat_ready": true,
       "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -621,7 +621,7 @@
       "dept_id": "00229",
       "surname": "李",
       "other_name": "芳",
-      "name": { "chi": "李芳", "eng": "Ivy Li" },
+      "name": {"chi": "李芳", "eng": "Ivy Li"},
       "title": "客戶經理",
       "agent_chat_ready": true,
       "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -640,7 +640,7 @@
       "dept_id": "00229",
       "surname": "林",
       "other_name": "春風",
-      "name": { "chi": "林春風", "eng": "Clement Lam" },
+      "name": {"chi": "林春風", "eng": "Clement Lam"},
       "title": "客戶經理",
       "agent_chat_ready": true,
       "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -659,7 +659,7 @@
       "dept_id": "02612",
       "surname": "林",
       "other_name": "翠霞",
-      "name": { "chi": "林翠霞", "eng": "Eva Lam" },
+      "name": {"chi": "林翠霞", "eng": "Eva Lam"},
       "title": "客戶主任",
       "agent_chat_ready": true,
       "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -678,7 +678,7 @@
       "dept_id": "02917",
       "surname": "李",
       "other_name": "智沁",
-      "name": { "chi": "李智沁", "eng": "Sandy Li" },
+      "name": {"chi": "李智沁", "eng": "Sandy Li"},
       "title": "高級客戶經理",
       "agent_chat_ready": true,
       "agent_chat_link": "https://chat-uat.midland.com.hk/html/chat/chat.html?action=info&stockid=M100099998&agentid=E-343839&lang=zh-tw",
@@ -694,10 +694,10 @@
   "property_index": {
     "id": "P000000780",
     "type": "PHASE",
-    "region": { "id": "10", "name": "港島" },
-    "subregion": { "id": "1003", "name": "南區" },
-    "district": { "id": "100305", "name": "鴨脷洲" },
-    "estate": { "id": "E00021", "name": "海怡半島" },
+    "region": {"id": "10", "name": "港島"},
+    "subregion": {"id": "1003", "name": "南區"},
+    "district": {"id": "100305", "name": "鴨脷洲"},
+    "estate": {"id": "E00021", "name": "海怡半島"},
     "index": [
       {
         "date": "2019-04-01T00:00:00.000Z",
@@ -831,7 +831,7 @@
       "tx_type": "S",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "L", "name": "低層" },
+      "floor_level": {"id": "L", "name": "低層"},
       "flat": "A",
       "feature": [],
       "price": 12090000,
@@ -839,7 +839,7 @@
       "area": 931,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002562", "name": "09座" },
+      "building": {"id": "B000002562", "name": "09座"},
       "unit": "U000276558",
       "mkt_type": 2,
       "floorplan": [
@@ -849,8 +849,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F562%2FUB000002562_59604.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200701557"
     },
     {
@@ -861,7 +861,7 @@
       "tx_type": "S",
       "original_source": "LANDREG",
       "source": "LANDREG",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "floor": "12",
       "flat": "D",
       "feature": [],
@@ -871,7 +871,7 @@
       "gain": 1.45,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002564", "name": "11座" },
+      "building": {"id": "B000002564", "name": "11座"},
       "unit": "U000277226",
       "mkt_type": 2,
       "floorplan": [
@@ -880,8 +880,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fwm.midland.com.hk%2Fimg_wm_revamp.php%3Fwm%3Dmr%26src%3Dhttp%253A%252F%252Fimg.midland.com.hk%252Ffloorplan_db%252Funit%252F564%252FUB000002564_74427.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-NO2020072920072900460156"
     },
     {
@@ -892,7 +892,7 @@
       "tx_type": "S",
       "original_source": "LANDREG",
       "source": "LANDREG",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "floor": "19",
       "flat": "G",
       "feature": [],
@@ -902,7 +902,7 @@
       "gain": 65.75,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002560", "name": "7座" },
+      "building": {"id": "B000002560", "name": "7座"},
       "unit": "U000275948",
       "mkt_type": 2,
       "floorplan": [
@@ -912,8 +912,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F560%2FUB000002560_59597.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-NO2020072720072701290183"
     },
     {
@@ -924,7 +924,7 @@
       "tx_type": "S",
       "original_source": "MIDLAND",
       "source": "LANDREG",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "floor": "18",
       "flat": "D",
       "feature": [],
@@ -934,7 +934,7 @@
       "gain": 54.52,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002562", "name": "9座" },
+      "building": {"id": "B000002562", "name": "9座"},
       "unit": "U000276694",
       "mkt_type": 2,
       "floorplan": [
@@ -944,8 +944,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F562%2FUB000002562_59606.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200601828"
     },
     {
@@ -954,7 +954,7 @@
       "tx_type": "S",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "L", "name": "低層" },
+      "floor_level": {"id": "L", "name": "低層"},
       "flat": "H",
       "feature": [],
       "price": 12780000,
@@ -962,7 +962,7 @@
       "area": 967,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002565", "name": "12座" },
+      "building": {"id": "B000002565", "name": "12座"},
       "unit": "U000277545",
       "mkt_type": 2,
       "floorplan": [
@@ -972,8 +972,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F565%2FUB000002565_59625.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200700730"
     },
     {
@@ -984,7 +984,7 @@
       "tx_type": "S",
       "original_source": "MIDLAND",
       "source": "LANDREG",
-      "floor_level": { "id": "L", "name": "低層" },
+      "floor_level": {"id": "L", "name": "低層"},
       "floor": "1",
       "flat": "D",
       "feature": [],
@@ -994,7 +994,7 @@
       "gain": 146.42000000000002,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002564", "name": "11座" },
+      "building": {"id": "B000002564", "name": "11座"},
       "unit": "U000277215",
       "mkt_type": 2,
       "floorplan": [
@@ -1003,8 +1003,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fwm.midland.com.hk%2Fimg_wm_revamp.php%3Fwm%3Dmr%26src%3Dhttp%253A%252F%252Fimg.midland.com.hk%252Ffloorplan_db%252Funit%252F564%252FUB000002564_74427.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200601529"
     },
     {
@@ -1015,7 +1015,7 @@
       "tx_type": "S",
       "original_source": "MIDLAND",
       "source": "LANDREG",
-      "floor_level": { "id": "H", "name": "高層" },
+      "floor_level": {"id": "H", "name": "高層"},
       "floor": "34",
       "flat": "B",
       "feature": [],
@@ -1025,7 +1025,7 @@
       "gain": 143.33,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002567", "name": "13A座" },
+      "building": {"id": "B000002567", "name": "13A座"},
       "unit": "U000277915",
       "mkt_type": 2,
       "floorplan": [
@@ -1035,8 +1035,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F567%2FUB000002567_59781.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200600942"
     },
     {
@@ -1045,7 +1045,7 @@
       "tx_type": "S",
       "original_source": "MIDLAND",
       "source": "LANDREG",
-      "floor_level": { "id": "H", "name": "高層" },
+      "floor_level": {"id": "H", "name": "高層"},
       "floor": "37",
       "flat": "G",
       "feature": [],
@@ -1054,7 +1054,7 @@
       "area": 918,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002561", "name": "8座" },
+      "building": {"id": "B000002561", "name": "8座"},
       "unit": "U000276381",
       "mkt_type": 2,
       "floorplan": [
@@ -1064,8 +1064,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F561%2FUB000002561_59603.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200601868"
     },
     {
@@ -1076,7 +1076,7 @@
       "tx_type": "S",
       "original_source": "LANDREG",
       "source": "LANDREG",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "floor": "24",
       "flat": "E",
       "feature": [],
@@ -1086,7 +1086,7 @@
       "gain": 146.54,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002568", "name": "15座" },
+      "building": {"id": "B000002568", "name": "15座"},
       "unit": "U000278263",
       "mkt_type": 2,
       "floorplan": [
@@ -1096,8 +1096,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F568%2FUB000002568_59631.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-NO2020071620071601770017"
     },
     {
@@ -1108,7 +1108,7 @@
       "tx_type": "S",
       "original_source": "LANDREG",
       "source": "LANDREG",
-      "floor_level": { "id": "L", "name": "低層" },
+      "floor_level": {"id": "L", "name": "低層"},
       "floor": "5",
       "flat": "G",
       "feature": [],
@@ -1118,7 +1118,7 @@
       "gain": 88.58,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002567", "name": "13A座" },
+      "building": {"id": "B000002567", "name": "13A座"},
       "unit": "U000277965",
       "mkt_type": 2,
       "floorplan": [
@@ -1128,8 +1128,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F567%2FUB000002567_77782.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-NO2020071520071502240250"
     }
   ],
@@ -1141,7 +1141,7 @@
       "tx_type": "L",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "flat": "C",
       "feature": [],
       "price": 24500,
@@ -1149,7 +1149,7 @@
       "area": 790,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002563", "name": "10座" },
+      "building": {"id": "B000002563", "name": "10座"},
       "unit": "U000276774",
       "mkt_type": 2,
       "floorplan": [
@@ -1159,8 +1159,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F563%2FUB000002563_59609.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200702098"
     },
     {
@@ -1169,7 +1169,7 @@
       "tx_type": "L",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "H", "name": "高層" },
+      "floor_level": {"id": "H", "name": "高層"},
       "flat": "B",
       "feature": [],
       "price": 26500,
@@ -1177,7 +1177,7 @@
       "area": 918,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002562", "name": "09座" },
+      "building": {"id": "B000002562", "name": "09座"},
       "unit": "U000276628",
       "mkt_type": 2,
       "floorplan": [
@@ -1187,8 +1187,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F562%2FUB000002562_59605.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200700474"
     },
     {
@@ -1197,7 +1197,7 @@
       "tx_type": "L",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "flat": "F",
       "feature": [],
       "price": 42000,
@@ -1205,7 +1205,7 @@
       "area": 1105,
       "bedroom": "4",
       "sitting_room": "2",
-      "building": { "id": "B000002569", "name": "16座" },
+      "building": {"id": "B000002569", "name": "16座"},
       "unit": "U000278695",
       "mkt_type": 2,
       "floorplan": [
@@ -1215,8 +1215,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F569%2FUB000002569_66692.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200700549"
     },
     {
@@ -1225,7 +1225,7 @@
       "tx_type": "L",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "M", "name": "中層" },
+      "floor_level": {"id": "M", "name": "中層"},
       "flat": "E",
       "feature": [],
       "price": 23800,
@@ -1233,7 +1233,7 @@
       "area": 798,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002565", "name": "12座" },
+      "building": {"id": "B000002565", "name": "12座"},
       "unit": "U000277465",
       "mkt_type": 2,
       "floorplan": [
@@ -1243,8 +1243,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F565%2FUB000002565_59622.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200700543"
     },
     {
@@ -1253,7 +1253,7 @@
       "tx_type": "L",
       "original_source": "MIDLAND",
       "source": "MIDLAND",
-      "floor_level": { "id": "L", "name": "低層" },
+      "floor_level": {"id": "L", "name": "低層"},
       "flat": "B",
       "feature": [],
       "price": 21000,
@@ -1261,7 +1261,7 @@
       "area": 769,
       "bedroom": "3",
       "sitting_room": "2",
-      "building": { "id": "B000002565", "name": "12座" },
+      "building": {"id": "B000002565", "name": "12座"},
       "unit": "U000277319",
       "mkt_type": 2,
       "floorplan": [
@@ -1271,8 +1271,8 @@
           "wan_doc_path": "https://wm.midland.com.hk/img_wm_revamp.php?wm=mr&src=http%3A%2F%2Fimg.midland.com.hk%2Ffloorplan_db%2Funit%2F565%2FUB000002565_74430.jpg"
         }
       ],
-      "estate": { "id": "E00021", "name": "海怡半島" },
-      "phase": { "id": "P000000780", "name": "2期" },
+      "estate": {"id": "E00021", "name": "海怡半島"},
+      "phase": {"id": "P000000780", "name": "2期"},
       "url_desc": "https://uat.midland.com.hk/zh-hk/transaction/-%E6%B5%B7%E6%80%A1%E5%8D%8A%E5%B3%B6-I20200700478"
     }
   ],
