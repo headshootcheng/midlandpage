@@ -7,6 +7,7 @@ import {
   View,
   Animated,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import PropertyDetail from '../components/PropertyDetail';
 import PropertyEstimation from '../components/PropertyEstimation';
 import PropertyTransaction from '../components/PropertyTransaction';
@@ -19,8 +20,11 @@ import LatestNews from '../components/LatestNews';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   React.useLayoutEffect(() => {
     navigation.setOptions({
+      headerTitle: () => <Text style={styles.headerText}>海怡半島</Text>,
       headerRight: () => (
-        <Button onPress={() => console.log('123')} title="Update count" />
+        <View>
+          <Icon name="heart-o" size={25} />
+        </View>
       ),
     });
   }, [navigation]);
@@ -129,6 +133,10 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  headerText: {
+    fontSize: 20,
+    //fontWeight: 'bold',
+  },
   menubar: {
     // backgroundColor: 'gray',
     width: '100%',
