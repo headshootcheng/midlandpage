@@ -16,6 +16,7 @@
     "@react-navigation/stack": "^5.8.0",
     "@types/react-native-snap-carousel": "^3.8.2",
     "lodash": "^4.17.19",
+    "moment": "^2.27.0",
     "native-base": "^2.13.13",
     "react": "16.13.1",
     "react-native": "^0.63.0",

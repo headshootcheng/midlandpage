@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import _ from 'lodash';
 import {toTenThousand, currencyFormat} from '../../util/Numberformat';
+import moment from 'moment';
 const TransactionCard: React.FC<{data: any}> = ({data}) => {
   console.log(data);
   const estate_name = _.get(data, 'estate.name', '');
@@ -27,7 +28,9 @@ const TransactionCard: React.FC<{data: any}> = ({data}) => {
       </View>
 
       <View style={styles.row}>
-        <Text style={styles.infoText}>31/07/2020 {bedroom}房</Text>
+        <Text style={styles.infoText}>
+          {moment(date).format('DD/MM/YYYY')} {bedroom}房
+        </Text>
         <Text style={styles.infoText}>
           實{net_area}呎 | 建{area}呎
         </Text>
