@@ -35,6 +35,8 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   const area = _.get(propertyData, 'area', 0);
   const price_net_area = _.get(propertyData, 'price_over_net_area', 0);
   const price_area = _.get(propertyData, 'area', 0);
+  const buyTransactionList = _.get(propertyData, 'sell_tx', []);
+  const rentTransactionList = _.get(propertyData, 'rent_tx', []);
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
@@ -163,7 +165,10 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
           price_area={price_area}
         />
         <PropertyEstimation />
-        <PropertyTransaction />
+        <PropertyTransaction
+          buyTransactionList={buyTransactionList}
+          rentTransactionList={rentTransactionList}
+        />
         <PropertyCalculation />
         <PropertyRecommendation />
         <PropertyLocation />
