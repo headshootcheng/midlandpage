@@ -8,6 +8,7 @@ import {
   Animated,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import PropertyImageSlider from '../components/PropertyImageSlider';
 import PropertyDetail from '../components/PropertyDetail';
 import PropertyEstimation from '../components/PropertyEstimation';
 import PropertyTransaction from '../components/PropertyTransaction';
@@ -18,12 +19,28 @@ import AgentList from '../components/AgentList';
 import LatestNews from '../components/LatestNews';
 import _ from 'lodash';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
+  const [yOffset, setYOffset] = useState(new Animated.Value(0));
+  const [currentView, setCurrentView] = useState<number>(0);
+  const propertyData = require('../data/property.json');
+  const photo = _.get(propertyData, 'photos', []);
+  const video = _.get(propertyData, 'video', []);
+  const vr = _.get(propertyData, 'photo360', []);
+  const district = _.get(propertyData, 'district', {});
+  const estate = _.get(propertyData, 'estate', {});
+  const phase = _.get(propertyData, 'phase', {});
+  const building = _.get(propertyData, 'building', {});
+  const price = _.get(propertyData, 'price', 0);
+  const monthlyPay = _.get(propertyData, 'monthly_pay', 0);
+  const net_area = _.get(propertyData, 'net_area', 0);
+  const area = _.get(propertyData, 'area', 0);
+  const price_net_area = _.get(propertyData, 'price_over_net_area', 0);
+  const price_area = _.get(propertyData, 'area', 0);
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
         <Icon name="chevron-back" size={25} style={{marginLeft: 10}} />
       ),
-      headerTitle: () => <Text style={styles.headerText}>海怡半島</Text>,
+      headerTitle: () => <Text style={styles.headerText}>{estate.name}</Text>,
       headerRight: () => (
         <View
           style={{
@@ -44,12 +61,6 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
     });
   }, [navigation]);
 
-  const [yOffset, setYOffset] = useState(new Animated.Value(0));
-  const [currentView, setCurrentView] = useState<number>(0);
-  const propertyData = require('../data/property.json');
-  const photo = _.get(propertyData, 'photos', []);
-  const video = _.get(propertyData, 'video', []);
-  const vr = _.get(propertyData, 'photo360', []);
   const MenuHeader = () => {
     return (
       <Animated.View
@@ -138,7 +149,19 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
           {nativeEvent: {contentOffset: {y: yOffset}}},
         ])}
         scrollEventThrottle={100}>
-        <PropertyDetail photoList={photo} videoList={video} vrList={vr} />
+        <PropertyImageSlider photoList={photo} videoList={video} vrList={vr} />
+        <PropertyDetail
+          district={district}
+          estate={estate}
+          phase={phase}
+          building={building}
+          price={price}
+          monthlyPay={monthlyPay}
+          net_area={net_area}
+          area={area}
+          price_net_area={price_net_area}
+          price_area={price_area}
+        />
         <PropertyEstimation />
         <PropertyTransaction />
         <PropertyCalculation />
