@@ -49,7 +49,10 @@ const PropertyTransaction: React.FC<{
         </View>
       </View>
       <View style={styles.underlineGray} />
-      <FlatList data={filterBuyList} renderItem={renderList} />
+      <FlatList
+        data={currentTab == 0 ? filterBuyList : filterRentList}
+        renderItem={renderList}
+      />
       <View style={styles.moreBtnLocation}>
         <TouchableHighlight style={styles.moreBtn}>
           <Text style={styles.moreBtnText}>更多成交紀錄</Text>
