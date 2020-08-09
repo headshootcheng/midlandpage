@@ -16,8 +16,8 @@ import PropertyCalculation from '../components/PropertyCalculation';
 import PropertyRecommendation from '../components/PropertyRecommendation';
 import PropertyLocation from '../components/PropertyLoacation';
 import AgentList from '../components/AgentList';
-import LatestNews from '../components/LatestNews';
-import _, {compact} from 'lodash';
+// import LatestNews from '../components/LatestNews';
+import _ from 'lodash';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   const [initialPostion, setInitialPosition] = useState<number>(0);
   const [yOffset, setYOffset] = useState(new Animated.Value(0));
@@ -234,7 +234,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
         contentOffset={{x: 0, y: initialPostion}}>
         <View
           onLayout={({nativeEvent}) => {
-            console.log('1', nativeEvent);
+            // console.log('1', nativeEvent);
             setPropertyLocation(nativeEvent.layout.y);
           }}>
           <PropertyImageSlider
@@ -259,7 +259,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
         <View
           //ref={(e) => (location = e)}
           onLayout={({nativeEvent}) => {
-            console.log('2', nativeEvent);
+            // console.log('2', nativeEvent);
             setTransactonLocation(nativeEvent.layout.y);
           }}>
           <PropertyTransaction
@@ -269,7 +269,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
         </View>
         <View
           onLayout={({nativeEvent}) => {
-            console.log('3', nativeEvent);
+            // console.log('3', nativeEvent);
             setEstateLocation(nativeEvent.layout.y);
           }}>
           <PropertyCalculation />
@@ -284,7 +284,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
         </View>
         <View
           onLayout={({nativeEvent}) => {
-            console.log('4', nativeEvent);
+            // console.log('4', nativeEvent);
             setAgentLocation(nativeEvent.layout.y);
           }}>
           <AgentList agentList={agentList} />
