@@ -19,7 +19,7 @@ import AgentList from '../components/AgentList';
 import LatestNews from '../components/LatestNews';
 import _ from 'lodash';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
-  const [yOffset, setYOffset] = useState(new Animated.Value(0));
+  const [yOffset, setYOffset] = useState(new Animated.Value(50));
   const [currentView, setCurrentView] = useState<number>(0);
   const propertyData = require('../data/property.json');
   const photo = _.get(propertyData, 'photos', []);
@@ -64,6 +64,12 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   }, [navigation]);
 
   const MenuHeader = () => {
+    const ViewScaleValue = yOffset.interpolate({
+      inputRange: [0, 150],
+      outputRange: [0, 50],
+      extrapolate: 'clamp',
+    });
+
     return (
       <Animated.View
         style={[
@@ -73,10 +79,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
               inputRange: [0, 50],
               outputRange: [0, 1],
             }),
-            height: yOffset.interpolate({
-              inputRange: [0, 100],
-              outputRange: [0, 40],
-            }),
+            height: ViewScaleValue,
           },
         ]}>
         <View style={{display: 'flex', flexDirection: 'column'}}>
@@ -187,7 +190,6 @@ const styles = StyleSheet.create({
   menubar: {
     // backgroundColor: 'gray',
     width: '100%',
-    maxHeight: 50,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -1,28 +1,30 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {toTenThousand, currencyFormat} from '../util/Numberformat';
-import {PieChart} from 'react-native-svg-charts';
+import {VictoryPie, Slice} from 'victory-native';
 const PropertyCalculation: React.FC<{}> = ({}) => {
   const [activeIndex, setActive] = useState(0);
   interface pieChartData {
     label: string;
-    data: number;
+    y: number;
     color: string;
+    index: number;
   }
-  const mortgageData: pieChartData[] = [
-    {label: '首期', data: 5400000, color: '#F0F30D'},
-    {label: '印花稅', data: 405000, color: '#0AD4EE'},
-    {label: '其他費用', data: 118000, color: 'gray'},
-  ];
-  const pieData = mortgageData.map(({data, color, label}, index) => ({
-    value: data,
-    svg: {
-      fill: color,
-      onPressOut: () => console.log('press'),
-    },
-    key: index,
-  }));
 
+  const initialData: pieChartData[] = [
+    {label: '首期', y: 0, color: '#F0F30D', index: 1},
+    {label: '印花稅', y: 0, color: '#0AD4EE', index: 2},
+    {label: '其他費用', y: 100, color: 'gray', index: 3},
+  ];
+  const mortgageData: pieChartData[] = [
+    {label: '首期', y: 5400000, color: '#F0F30D', index: 1},
+    {label: '印花稅', y: 405000, color: '#0AD4EE', index: 2},
+    {label: '其他費用', y: 118000, color: 'gray', index: 3},
+  ];
+  const [pieData, setPieData] = useState<pieChartData[]>(initialData);
+  useEffect(() => {
+    setTimeout(() => setPieData(mortgageData), 1500);
+  }, []);
   return (
     <View style={styles.wrapper}>
       <Text style={styles.title}>按揭計算</Text>
@@ -43,17 +45,22 @@ const PropertyCalculation: React.FC<{}> = ({}) => {
             {toTenThousand(10800000)}
           </Text>
         </View>
-
-        <PieChart
-          style={{height: 140, left: 20}}
+        <VictoryPie
+          innerRadius={40}
+          animate={{
+            duration: 5000,
+            easing: 'circle',
+          }}
+          colorScale={['#F0F30D', '#0AD4EE', 'gray']}
+          labels={({datum}) => null}
           data={pieData}
-          outerRadius="100%"
-          innerRadius="50%"
-          padAngle={0}
+          width={150}
+          height={150}
+          padding={{left: 20}}
         />
       </View>
 
-      {mortgageData.map(({data, label, color}, index) => {
+      {mortgageData.map(({y, label, color}, index) => {
         return (
           <View style={styles.pieChartArea}>
             <View
@@ -66,7 +73,7 @@ const PropertyCalculation: React.FC<{}> = ({}) => {
               <Text style={styles.pieChartInfoTextNormal}>{label}</Text>
             </View>
             <Text style={styles.pieChartInfoTextNormal}>
-              ${currencyFormat(data)}
+              ${currencyFormat(y)}
             </Text>
           </View>
         );
