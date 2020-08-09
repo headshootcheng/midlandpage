@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {
   Text,
-  Button,
   ScrollView,
   StyleSheet,
   View,
   Animated,
+  TouchableHighlight,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import PropertyImageSlider from '../components/PropertyImageSlider';
@@ -19,7 +19,12 @@ import AgentList from '../components/AgentList';
 import LatestNews from '../components/LatestNews';
 import _, {compact} from 'lodash';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
-  const [yOffset, setYOffset] = useState(new Animated.Value(50));
+  const [initialPostion, setInitialPosition] = useState<number>(0);
+  const [yOffset, setYOffset] = useState(new Animated.Value(0));
+  const [propertyLocation, setPropertyLocation] = useState<number>(0);
+  const [transcationLocation, setTransactonLocation] = useState<number>(0);
+  const [estateLocation, setEstateLocation] = useState<number>(0);
+  const [agentLocation, setAgentLocation] = useState<number>(0);
   const [currentView, setCurrentView] = useState<number>(0);
   const propertyData = require('../data/property.json');
   const photo = _.get(propertyData, 'photos', []);
@@ -38,6 +43,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   const buyTransactionList = _.get(propertyData, 'sell_tx', []);
   const rentTransactionList = _.get(propertyData, 'rent_tx', []);
   const agentList = _.get(propertyData, 'agent', []);
+  const myScrollView = useRef();
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
@@ -69,6 +75,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
       inputRange: [0, 150],
       outputRange: [0, 50],
       extrapolate: 'clamp',
+      // useNativeDriver: true,
     });
 
     return (
@@ -83,54 +90,107 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
             height: ViewScaleValue,
           },
         ]}>
-        <View style={{display: 'flex', flexDirection: 'column'}}>
-          <Text
-            style={[styles.menutext, currentView == 0 && {fontWeight: 'bold'}]}>
-            物業
-          </Text>
-          <View
-            style={[
-              styles.yellowbar,
-              currentView == 0 && {borderTopColor: 'orange'},
-            ]}
-          />
-        </View>
-        <View style={{display: 'flex', flexDirection: 'column'}}>
-          <Text
-            style={[styles.menutext, currentView == 1 && {fontWeight: 'bold'}]}>
-            成交
-          </Text>
-          <View
-            style={[
-              styles.yellowbar,
-              currentView == 1 && {borderTopColor: 'orange'},
-            ]}
-          />
-        </View>
-        <View style={{display: 'flex', flexDirection: 'column'}}>
-          <Text
-            style={[styles.menutext, currentView == 2 && {fontWeight: 'bold'}]}>
-            屋苑
-          </Text>
-          <View
-            style={[
-              styles.yellowbar,
-              currentView == 2 && {borderTopColor: 'orange'},
-            ]}
-          />
-        </View>
-        <View style={{display: 'flex', flexDirection: 'column'}}>
-          <Text
-            style={[styles.menutext, currentView == 3 && {fontWeight: 'bold'}]}>
-            代理
-          </Text>
-          <View
-            style={[
-              styles.yellowbar,
-              currentView == 3 && {borderTopColor: 'orange'},
-            ]}
-          />
-        </View>
+        <TouchableHighlight
+          onPress={() => {
+            setInitialPosition(propertyLocation);
+            myScrollView.current.scrollTo({
+              x: 0,
+              y: propertyLocation,
+              animated: true,
+            });
+          }}>
+          <View style={{display: 'flex', flexDirection: 'column'}}>
+            <Text
+              style={[
+                styles.menutext,
+                currentView == 0 && {fontWeight: 'bold'},
+              ]}>
+              物業
+            </Text>
+            <View
+              style={[
+                styles.yellowbar,
+                currentView == 0 && {borderTopColor: 'orange'},
+              ]}
+            />
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => {
+            setInitialPosition(propertyLocation);
+            myScrollView.current.scrollTo({
+              x: 0,
+              y: transcationLocation,
+              animated: true,
+            });
+          }}>
+          <View style={{display: 'flex', flexDirection: 'column'}}>
+            <Text
+              style={[
+                styles.menutext,
+                currentView == 1 && {fontWeight: 'bold'},
+              ]}>
+              成交
+            </Text>
+            <View
+              style={[
+                styles.yellowbar,
+                currentView == 1 && {borderTopColor: 'orange'},
+              ]}
+            />
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight
+          onPress={() => {
+            setInitialPosition(propertyLocation);
+            myScrollView.current.scrollTo({
+              x: 0,
+              y: estateLocation,
+              animated: true,
+            });
+          }}>
+          <View style={{display: 'flex', flexDirection: 'column'}}>
+            <Text
+              style={[
+                styles.menutext,
+                currentView == 2 && {fontWeight: 'bold'},
+              ]}>
+              屋苑
+            </Text>
+            <View
+              style={[
+                styles.yellowbar,
+                currentView == 2 && {borderTopColor: 'orange'},
+              ]}
+            />
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight
+          onPress={() => {
+            setInitialPosition(propertyLocation);
+            myScrollView.current.scrollTo({
+              x: 0,
+              y: agentLocation,
+              animated: true,
+            });
+          }}>
+          <View style={{display: 'flex', flexDirection: 'column'}}>
+            <Text
+              style={[
+                styles.menutext,
+                currentView == 3 && {fontWeight: 'bold'},
+              ]}>
+              代理
+            </Text>
+            <View
+              style={[
+                styles.yellowbar,
+                currentView == 3 && {borderTopColor: 'orange'},
+              ]}
+            />
+          </View>
+        </TouchableHighlight>
         {/* <View style={{display: 'flex', flexDirection: 'column'}}>
           <Text
             style={[styles.menutext, currentView == 4 && {fontWeight: 'bold'}]}>
@@ -146,17 +206,37 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
       </Animated.View>
     );
   };
+
+  const handlePosition: (position: number) => void = (position: number) => {
+    if (position >= propertyLocation && position < transcationLocation)
+      setCurrentView(0);
+    if (position >= transcationLocation && position < estateLocation)
+      setCurrentView(1);
+    if (position >= estateLocation && position < agentLocation)
+      setCurrentView(2);
+    if (position >= agentLocation) setCurrentView(3);
+  };
+
   return (
     <View style={styles.background}>
       <MenuHeader />
       <ScrollView
         style={styles.background}
-        onScroll={Animated.event([
-          {nativeEvent: {contentOffset: {y: yOffset}}},
-        ])}
-        onScrollEndDrag={() => console.log('123')}
-        scrollEventThrottle={100}>
-        <View>
+        ref={myScrollView}
+        onScroll={Animated.event(
+          [{nativeEvent: {contentOffset: {y: yOffset}}}],
+          {
+            listener: (event) =>
+              handlePosition(event.nativeEvent.contentOffset.y),
+          },
+        )}
+        scrollEventThrottle={100}
+        contentOffset={{x: 0, y: initialPostion}}>
+        <View
+          onLayout={({nativeEvent}) => {
+            console.log('1', nativeEvent);
+            setPropertyLocation(nativeEvent.layout.y);
+          }}>
           <PropertyImageSlider
             photoList={photo}
             videoList={video}
@@ -176,13 +256,22 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
           />
           <PropertyEstimation />
         </View>
-        <View>
+        <View
+          //ref={(e) => (location = e)}
+          onLayout={({nativeEvent}) => {
+            console.log('2', nativeEvent);
+            setTransactonLocation(nativeEvent.layout.y);
+          }}>
           <PropertyTransaction
             buyTransactionList={buyTransactionList}
             rentTransactionList={rentTransactionList}
           />
         </View>
-        <View>
+        <View
+          onLayout={({nativeEvent}) => {
+            console.log('3', nativeEvent);
+            setEstateLocation(nativeEvent.layout.y);
+          }}>
           <PropertyCalculation />
 
           <PropertyRecommendation />
@@ -193,7 +282,11 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
             point_longitude={building.streetview_longitude}
           />
         </View>
-        <View>
+        <View
+          onLayout={({nativeEvent}) => {
+            console.log('4', nativeEvent);
+            setAgentLocation(nativeEvent.layout.y);
+          }}>
           <AgentList agentList={agentList} />
         </View>
       </ScrollView>

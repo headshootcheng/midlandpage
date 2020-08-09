@@ -4,7 +4,7 @@ import _ from 'lodash';
 import {toTenThousand, currencyFormat} from '../../util/Numberformat';
 import moment from 'moment';
 const TransactionCard: React.FC<{data: any}> = ({data}) => {
-  console.log(data);
+  //console.log(data);
   const estate_name = _.get(data, 'estate.name', '');
   const phase_name = _.get(data, 'phase.name', '');
   const building_name = _.get(data, 'building.name', '');
