@@ -174,7 +174,12 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
         />
         <PropertyCalculation />
         <PropertyRecommendation />
-        <PropertyLocation />
+        <PropertyLocation
+          latitude={building.latitude}
+          longitude={building.longitude}
+          point_latitude={building.streetview_latitude}
+          point_longitude={building.streetview_longitude}
+        />
         <AgentList />
         <LatestNews />
       </ScrollView>
