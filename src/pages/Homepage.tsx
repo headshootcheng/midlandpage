@@ -17,7 +17,7 @@ import PropertyRecommendation from '../components/PropertyRecommendation';
 import PropertyLocation from '../components/PropertyLoacation';
 import AgentList from '../components/AgentList';
 import LatestNews from '../components/LatestNews';
-import _ from 'lodash';
+import _, {compact} from 'lodash';
 const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   const [yOffset, setYOffset] = useState(new Animated.Value(50));
   const [currentView, setCurrentView] = useState<number>(0);
@@ -37,6 +37,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
   const price_area = _.get(propertyData, 'area', 0);
   const buyTransactionList = _.get(propertyData, 'sell_tx', []);
   const rentTransactionList = _.get(propertyData, 'rent_tx', []);
+  const agentList = _.get(propertyData, 'agent', []);
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
@@ -130,7 +131,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
             ]}
           />
         </View>
-        <View style={{display: 'flex', flexDirection: 'column'}}>
+        {/* <View style={{display: 'flex', flexDirection: 'column'}}>
           <Text
             style={[styles.menutext, currentView == 4 && {fontWeight: 'bold'}]}>
             資訊
@@ -141,7 +142,7 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
               currentView == 4 && {borderTopColor: 'orange'},
             ]}
           />
-        </View>
+        </View> */}
       </Animated.View>
     );
   };
@@ -153,35 +154,48 @@ const Homepage: React.FC<{navigation: any}> = ({navigation}) => {
         onScroll={Animated.event([
           {nativeEvent: {contentOffset: {y: yOffset}}},
         ])}
+        onScrollEndDrag={() => console.log('123')}
         scrollEventThrottle={100}>
-        <PropertyImageSlider photoList={photo} videoList={video} vrList={vr} />
-        <PropertyDetail
-          district={district}
-          estate={estate}
-          phase={phase}
-          building={building}
-          price={price}
-          monthlyPay={monthlyPay}
-          net_area={net_area}
-          area={area}
-          price_net_area={price_net_area}
-          price_area={price_area}
-        />
-        <PropertyEstimation />
-        <PropertyTransaction
-          buyTransactionList={buyTransactionList}
-          rentTransactionList={rentTransactionList}
-        />
-        <PropertyCalculation />
-        <PropertyRecommendation />
-        <PropertyLocation
-          latitude={building.latitude}
-          longitude={building.longitude}
-          point_latitude={building.streetview_latitude}
-          point_longitude={building.streetview_longitude}
-        />
-        <AgentList />
-        <LatestNews />
+        <View>
+          <PropertyImageSlider
+            photoList={photo}
+            videoList={video}
+            vrList={vr}
+          />
+          <PropertyDetail
+            district={district}
+            estate={estate}
+            phase={phase}
+            building={building}
+            price={price}
+            monthlyPay={monthlyPay}
+            net_area={net_area}
+            area={area}
+            price_net_area={price_net_area}
+            price_area={price_area}
+          />
+          <PropertyEstimation />
+        </View>
+        <View>
+          <PropertyTransaction
+            buyTransactionList={buyTransactionList}
+            rentTransactionList={rentTransactionList}
+          />
+        </View>
+        <View>
+          <PropertyCalculation />
+
+          <PropertyRecommendation />
+          <PropertyLocation
+            latitude={building.latitude}
+            longitude={building.longitude}
+            point_latitude={building.streetview_latitude}
+            point_longitude={building.streetview_longitude}
+          />
+        </View>
+        <View>
+          <AgentList agentList={agentList} />
+        </View>
       </ScrollView>
     </View>
   );
